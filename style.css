@@ -73,6 +73,10 @@
     background-color: red;
 }
 
+.case-right {
+    background-color: green;
+}
+
 .case:nth-child(-2n+9), 
 .case:nth-child(9) ~ div:nth-child(-2n+16), 
 .case:nth-child(17) ~ div:nth-child(-2n+25), 
