@@ -8,7 +8,8 @@ const score = document.getElementById('score'),
 let answer = 65,
     scoreCounter = 0,
     seconds = 60,
-    reponse = document.getElementById('reponse');
+    reponse = document.getElementById('reponse'),
+    playerClickedOnCase = 0;
 
 // Add listeners events
 newGame.addEventListener('click', gameStart)
@@ -21,9 +22,10 @@ function gameStart() {
     find.innerHTML = answer
     seconds = 60
     stopChrono()
-    if (true) {
+    if (playerClickedOnCase = item.dataset.name) {
         scoreCounter += 1
         score.innerHTML = scoreCounter
+        answer = getRandomChessCase()
     } else {
         caseClicked.classList.add('wrong-case')
     }
@@ -32,13 +34,13 @@ function gameStart() {
 
 /**
  * Get a random squares of the chessboard
- * @returns { Number{1-64} }  
+ * @returns string  
  */
 function getRandomChessCase() {
-    return Math.floor(Math.random() * 65)
+    return casesName[Math.floor(Math.random() * 65)]
 }
 
-const startChrono = setInterval(chrono, 1000);
+// const startChrono = setInterval(chrono, 1000);
 const stopChrono = () => clearInterval(startChrono);
 
 /**
@@ -74,17 +76,19 @@ for(const letter of letters) {
 
 // build cases
 function buildCases() {
+    // build square
     for(let i = 0; i < 64; i++ ){
         chessboard.insertAdjacentHTML('afterbegin', `<div class="case ${i % 2 ? 'case--white' : 'case--black'}" data-name=${casesName[i]} data-number${i}>
-        <span class='d-none case-name'>${i}<span>
+            <span class='d-none case-name'>${casesName[i]}<span>
         </div>`)
     }
     const cases = document.getElementsByClassName('case')
+    // handle span text case name
     for (let item of cases) {
         item.addEventListener('click', function(e){
             for (span of document.getElementsByClassName('case-name')) {span.classList.add('d-none')};
             e.currentTarget.querySelector('span').classList.remove('d-none');
-            console.log(item.dataset.name);
+            playerClickedOnCase = item.dataset.name
         })
     }
 }

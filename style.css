@@ -7,16 +7,25 @@
     background-color: brown;
 }
 
+#chessboard {
+    transform: rotate(90deg);
+}
+
 
 .case {
     cursor: pointer;
     width: 60px;
     height: 60px;
     background-color: darkgreen;
+    transform: rotate(-90deg);
 }
 
 .case:hover{
     filter: grayscale(50%);
+}
+
+.case--wrong {
+    background-color: red;
 }
 
 .case:nth-child(-2n+9), 
