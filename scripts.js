@@ -66,11 +66,20 @@ for(const letter of letters) {
 }
 
 
-// build cases
+/**
+ * 
+ */
 function buildCases() {
+    // for (let i = 0 ; i < 8 ; i++) {
+    //     chessboard.insertAdjacentHTML('afterbegin', `
+    //     <div class="chessboard-strip"}>
+    //         ${letters[i]}
+    //     </div>`)
+    // }
     // build square
     for(let i = 0; i < 64; i++ ){
-        chessboard.insertAdjacentHTML('afterbegin', `<div class="case ${i % 2 ? 'case--white' : 'case--black'}" data-name=${casesName[i]} data-number${i}>
+        chessboard.insertAdjacentHTML('afterbegin', `
+        <div class="case ${i % 2 ? 'case--white' : 'case--black'}" data-name=${casesName[i]} data-number${i}>
             <span class='d-none case-name'>${casesName[i]}<span>
         </div>`)
     }
@@ -105,6 +114,32 @@ function isTheCaseClickedTheGoodOne(e) {
 function newTurn() {
     answer = getRandomChessCase()
     find.innerHTML = answer
+}
+
+/* RULES & PARAMETERS */
+
+/**
+ * 
+ * @param {*} param 
+ */
+function displayCasesNames(param) {
+    switch(param) {
+        case 'hoover':
+            break;
+        case 'always':
+            break;
+        case 'never':
+            break;
+        case 'click':
+            break;
+    }
+}
+
+/**
+ * Display Black or White point of view
+ */
+function reverseBoard() {
+
 }
 
 

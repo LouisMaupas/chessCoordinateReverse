@@ -52,6 +52,10 @@
     transform: rotate(90deg);
 }
 
+.chessboard-strip {
+    text-align: center;
+    align-self: center;
+}
 
 .case {
     cursor: pointer;
