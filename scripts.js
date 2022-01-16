@@ -18,17 +18,9 @@ newGame.addEventListener('click', gameStart)
 function gameStart() {
     score.innerHTML = "0";
     scoreCounter = 0;
-    answer = getRandomChessCase()
-    find.innerHTML = answer
+    newTurn()
     seconds = 60
-    stopChrono()
-    if (playerClickedOnCase = item.dataset.name) {
-        scoreCounter += 1
-        score.innerHTML = scoreCounter
-        answer = getRandomChessCase()
-    } else {
-        caseClicked.classList.add('wrong-case')
-    }
+    // stopChrono()
 }
 
 
@@ -41,7 +33,7 @@ function getRandomChessCase() {
 }
 
 // const startChrono = setInterval(chrono, 1000);
-const stopChrono = () => clearInterval(startChrono);
+// const stopChrono = () => clearInterval(startChrono);
 
 /**
  * One minute timer
@@ -89,10 +81,30 @@ function buildCases() {
             for (span of document.getElementsByClassName('case-name')) {span.classList.add('d-none')};
             e.currentTarget.querySelector('span').classList.remove('d-none');
             playerClickedOnCase = item.dataset.name
+            isTheCaseClickedTheGoodOne(e)
         })
     }
 }
 buildCases()
 
+/**
+ * 
+ */
+function isTheCaseClickedTheGoodOne(e) {
+    if (playerClickedOnCase === answer) {
+            scoreCounter += 1
+            score.innerHTML = scoreCounter
+            newTurn()
+        e.currentTarget.classList.add('case--right')
+    }
+}
+
+/**
+ * 
+ */
+function newTurn() {
+    answer = getRandomChessCase()
+    find.innerHTML = answer
+}
 
 

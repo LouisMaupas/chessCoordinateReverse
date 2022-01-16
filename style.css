@@ -16,7 +16,7 @@
     cursor: pointer;
     width: 60px;
     height: 60px;
-    background-color: darkgreen;
+    background-color: rgb(224, 233, 224);
     transform: rotate(-90deg);
 }
 
