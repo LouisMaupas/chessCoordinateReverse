@@ -8,19 +8,27 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="bloc-rules">
-        <div>Point de vue : <span class="button">White</span> Black</div>
-        <div>Afficher les cases ? <span id="display-cases" class="button">au click</span> survol / toujours / jamais</div>
-        <div>Score<span id="score" ></span></div>
-        <div>Temps restant : <span id="timer"></span></div>
-        <div>Afficher les coordonnées ? <span class="button">Non</span> </div>
+    <div class="container">
+        <div class="menu">
+            <div class="bloc-rules">
+                <div>Point de vue : <span class="button">White</span> Black</div>
+                <div>Afficher les cases ? <span id="display-cases" class="button">au click</span> survol / toujours / jamais</div>
+                <div>Score <span id="score" ></span></div>
+                <div>Temps restant : <span id="timer"></span></div>
+                <div>Afficher les coordonnées ? <span class="button">Non</span> </div>
+            </div>
+            <div id="new-game" class="button">Nouvelle partie</div>
+            <div>Clique sur la case : <span id="find"></span> </div>
+        </div>
+        <div class="game">
+            <div id="chess-wrapper">
+                <div id="chessboard"></div>
+            </div>
+        </div>
     </div>
-    <div>Clique sur la case : <span id="find"></span> </div>
 
-    <div id="new-game" class="button">Nouvelle partie</div>
-    <div id="chess-wrapper">
-        <div id="chessboard"></div>
-    </div>
+
+
     <script src="scripts.js" ></script>
 </body>
 </html>

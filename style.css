@@ -1,3 +1,44 @@
+.container {
+    margin: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.d-none {
+    display: none;
+}
+
+/* MENU */
+.button {
+    background-color: rgb(158, 115, 58);
+    max-width: 150px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+}
+
+.button:hover{
+    background-color: burlywood;
+}
+
+.button:active{
+    background-color: rgba(222, 184, 135, 0.575);
+}
+
+#find {
+    padding: 1rem;
+    background-color: chocolate;
+    font-weight: bold;
+    font-size: x-large;
+    border-radius: 50%;
+    box-shadow: 10px 5px 5px grey;
+}
+
+/* CHESSBOARD */
 #chessboard {
     border: 50px solid #330721;
     display: grid;
@@ -38,28 +79,4 @@
 .case:nth-child(57) ~ div:nth-child(-2n+64){
   background-color: #441a03;
   color: #fff;
-}
-
-.d-none {
-    display: none;
-}
-
-.button {
-    background-color: rgb(158, 115, 58);
-    max-width: 150px;
-    text-align: center;
-    border-radius: 15px;
-    padding: 0.5rem;
-    margin: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: large;
-}
-
-.button:hover{
-    background-color: burlywood;
-}
-
-.button:active{
-    background-color: rgba(222, 184, 135, 0.575);
 }
