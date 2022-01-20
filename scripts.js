@@ -14,7 +14,9 @@ let answer = 65,
 // Add listeners events
 newGame.addEventListener('click', gameStart)
 
-// start the game
+/**
+ * Start the game
+ */
 function gameStart() {
     score.innerHTML = "0";
     scoreCounter = 0;
@@ -26,7 +28,7 @@ function gameStart() {
 
 /**
  * Get a random squares of the chessboard
- * @returns string  
+ * @returns {string} column + row
  */
 function getRandomChessCase() {
     return casesName[Math.floor(Math.random() * 65)]
@@ -56,7 +58,9 @@ function chrono() {
 // Build Chessboard
 const chessboard = document.getElementById('chessboard');
 
-// Build cases names
+/**
+ * Build cases names
+ */
 const letters = ['a','b','c','d','e','f','g','h'];
 const casesName = [];
 for(const letter of letters) {
@@ -67,7 +71,7 @@ for(const letter of letters) {
 
 
 /**
- * 
+ * Build chessboard game
  */
 function buildCases() {
     // for (let i = 0 ; i < 8 ; i++) {
@@ -109,7 +113,7 @@ function isTheCaseClickedTheGoodOne(e) {
 }
 
 /**
- * 
+ * Start a new game
  */
 function newTurn() {
     answer = getRandomChessCase()
