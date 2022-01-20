@@ -46,8 +46,8 @@ color: #BBBABA;
 }
 
 .rule {
-    background-color: gray;
-    margin: 1px;
+    background: linear-gradient(#3e3d39ee, #3E3D39);
+    margin: 0.3rem;
     padding: 0.5rem;
     border-radius: 5px;
 }
