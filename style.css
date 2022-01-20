@@ -1,3 +1,10 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+font-family: 'Sora', sans-serif;
+background: linear-gradient(#3E3D39, #41403D);
+color: #BBBABA;
+}
+
 .container {
     margin: 3rem;
     display: flex;
@@ -38,14 +45,21 @@
     box-shadow: 10px 5px 5px grey;
 }
 
+.rule {
+    background-color: gray;
+    margin: 1px;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
 /* CHESSBOARD */
 #chessboard {
-    border: 50px solid #330721;
+    border: 5px solid #966F33;
+    border-radius: 8px;
     display: grid;
     grid-gap: 0;
-    grid-template-columns: repeat(8, 62px);
-    grid-template-rows: repeat(8, 61px);
-    background-color: brown;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
 }
 
 #chessboard {
@@ -61,12 +75,12 @@
     cursor: pointer;
     width: 60px;
     height: 60px;
-    background-color: rgb(224, 233, 224);
+    background-color: #f5f0ed;
     transform: rotate(-90deg);
 }
 
 .case:hover{
-    filter: grayscale(50%);
+    filter: grayscale(70%);
 }
 
 .case--wrong {
@@ -85,6 +99,39 @@
 .case:nth-child(41) ~ div:nth-child(-2n+48), 
 .case:nth-child(49) ~ div:nth-child(-2n+57), 
 .case:nth-child(57) ~ div:nth-child(-2n+64){
-  background-color: #441a03;
+  background: linear-gradient(#441a03, #441a03a9);
   color: #fff;
+}
+
+/* Small screen and pad */
+@media (min-width: 500px) and (max-width: 1280px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: auto;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .bloc-game{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.game {
+    width: 480px;
+}
+
+#chess-xrapper {
+    width: 480px;
+}
+
+#chessboard {
+    width: 480px;
 }
