@@ -2,7 +2,9 @@
 const score = document.getElementById('score'),
     newGame = document.getElementById('new-game'),
     timer = document.getElementById('timer'),
-    find = document.getElementById('find');
+    find = document.getElementById('find'),
+    gameClick = document.getElementById('game-click'),
+    gameWrite = document.getElementById('game-write');
 
 // Declare and initialize variables
 let answer = 65,
@@ -12,7 +14,9 @@ let answer = 65,
     playerClickedOnCase = 0;
 
 // Add listeners events
-newGame.addEventListener('click', gameStart)
+newGame.addEventListener('click', gameStart);
+gameClick.addEventListener('Click', )
+gameWrite.addEventListener('Click', )
 
 /**
  * Start the game
