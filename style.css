@@ -17,7 +17,7 @@ color: #BBBABA;
 
 /* MENU */
 .button {
-    background-color: rgb(158, 115, 58);
+    border: 1px solid rgb(158, 115, 58);
     max-width: 150px;
     text-align: center;
     border-radius: 15px;
@@ -26,6 +26,10 @@ color: #BBBABA;
     cursor: pointer;
     font-weight: bold;
     font-size: large;
+}
+
+.button--selected {
+    background-color: rgb(158, 115, 58);
 }
 
 .button:hover{
@@ -50,6 +54,11 @@ color: #BBBABA;
     margin: 0.3rem;
     padding: 0.5rem;
     border-radius: 5px;
+}
+
+#score {
+    font-weight: bold;
+    color: white;
 }
 
 /* CHESSBOARD */
