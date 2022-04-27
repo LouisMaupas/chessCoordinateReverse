@@ -15,8 +15,6 @@ let answer = 65,
 
 // Add listeners events
 newGame.addEventListener('click', gameStart);
-gameClick.addEventListener('Click', )
-gameWrite.addEventListener('Click', )
 
 /**
  * Start the game
@@ -34,8 +32,8 @@ function gameStart() {
  * Get a random squares of the chessboard
  * @returns {string} column + row
  */
-function getRandomChessCase() {
-    return casesName[Math.floor(Math.random() * 65)]
+const getRandomChessCase = () => {
+   return casesName[Math.floor(Math.random() * 65)]
 }
 
 // const startChrono = setInterval(chrono, 1000);
@@ -119,7 +117,7 @@ function isTheCaseClickedTheGoodOne(e) {
 /**
  * Start a new game
  */
-function newTurn() {
+const newTurn = () => {
     answer = getRandomChessCase()
     find.innerHTML = answer
 }
